@@ -1,0 +1,62 @@
+@input-width: 324px;
+@input-padding: 8px 11px;
+@input-border-radius: 6px;
+@input-error-color: rgba(235, 21, 38, 0.85);
+@input-error-background: rgba(235, 21, 38, 0.04);
+
+.ant-form-item-control-input {
+    width: @input-width;
+}
+
+.ant-input-affix-wrapper {
+    padding: @input-padding;
+    border-radius: @input-border-radius;
+}
+
+.ant-input-password-icon {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.ant-input-affix-wrapper .ant-input {
+    border-radius: 0;
+}
+
+.ant-input {
+    padding: @input-padding;
+    border-radius: @input-border-radius;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.ant-form-item-explain {
+    padding-top: 4px;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.ant-form-item-explain.ant-form-item-explain-error {
+    color: @input-error-color;
+}
+
+.ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input {
+
+    &,
+    &:hover {
+        border-color: @input-error-color;
+        background-color: @input-error-background;
+    }
+}
+
+.ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper {
+
+    &,
+    &:hover {
+        border-color: @input-error-color;
+        background-color: @input-error-background;
+    }
+
+    & .ant-input {
+        border-color: transparent;
+        background-color: transparent;
+    }
+}
